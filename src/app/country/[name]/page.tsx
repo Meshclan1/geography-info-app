@@ -7,7 +7,7 @@ const CountryNamePage = async ({
 }) => {
   const { name } = await params;
   return (
-    <div>
+    <div className="flex min-h-screen flex-col items-center">
       Country Name is: <b> {name}</b>
     </div>
   );
