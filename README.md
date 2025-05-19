@@ -1,3 +1,62 @@
+# 🌍 ExploreWorld
+
+A Next.js 15 app that allows users to explore countries, their cities, and get real-time weather and demographic data. This project demonstrates dynamic routing, API fetching, server components, and a clean modular structure!
+
+---
+
+## 🚀 Features
+
+- ✅ View a list of countries with flags and key details  
+- ✅ Dynamic route for country pages (`/country/[name]`)  
+- ✅ Nested dynamic route for cities (`/country/[name]/[city]`)  
+- ✅ API integration (REST Countries, GeoDB Cities, OpenWeather)  
+- ✅ Server components for data fetching  
+- ✅ Custom API route handlers with error handling  
+- ✅ Type-safe data handling using TypeScript  
+- ✅ Modular project structure using `features/`, `lib/`, `api/`
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 15 (App Router)**
+- **TypeScript**
+- **REST Countries API** - https://restcountries.com
+- **GeoDB Cities API** (via RapidAPI) - https://rapidapi.com/wirefreethought/api/geodb-cities
+- **OpenWeather API** - https://openweathermap.org
+- **Tailwind CSS** (optional for styling)
+- **Zod** (optional for schema validation)
+
+---
+
+## 📁 Project Structure
+
+/app
+/country
+/[name]
+/[city]
+page.tsx # City weather & info page
+page.tsx # Country details + cities list
+page.tsx # Landing page with all countries
+
+/api
+/fetchCities/route.ts # Example API handler
+
+/features
+/countries
+fetchCountries.ts # Logic to get all countries
+/cities
+fetchCities.ts # Logic to get cities by country
+/weather
+fetchWeather.ts # Logic to fetch weather info
+
+/lib
+types.ts # Shared types/interfaces
+constants.ts # Reusable constants
+
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
